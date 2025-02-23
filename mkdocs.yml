@@ -1,0 +1,39 @@
+site_name: How to be a good brother. The last guide you'll ever need (Part 1).
+
+theme:
+  name: material
+#   favicon: images/favicon.png
+  palette: 
+
+    # Palette toggle for light mode
+    - scheme: default
+      toggle:
+        icon: material/brightness-7 
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  custom_dir: overrides
+plugins:
+  - search
+  - autorefs
+  - minify:
+      minify_html: true
+      minify_js: true
+      minify_css: true
+      htmlmin_opts:
+          remove_comments: true
+      cache_safe: true
+
+extra:
+  generator: false
+  analytics:
+    provider: posthog
+markdown_extensions:
+  - attr_list
+  - toc:
+      permalink: "#"
+      separator: "_"
